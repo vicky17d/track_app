@@ -1,4 +1,26 @@
-TrackApp::Application.routes.draw do
+MetroApp::Application.routes.draw do
+
+
+  get "projects/new"
+
+  resources :projects
+  resources :users
+  resources :weeks
+ 
+ 
+  match '/help',    to: 'static_pages#help'
+  match '/about',   to: 'static_pages#about'
+
+  resources :sessions, only: [:new, :create, :destroy]
+  match '/signup',  to: 'users#new',            via: 'get'
+  match '/signin',  to: 'sessions#new',         via: 'get'
+  match '/signout', to: 'sessions#destroy',     via: 'delete'
+
+  get "static_pages/home"
+
+  root to: "static_pages#home"
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

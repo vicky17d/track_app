@@ -1,0 +1,90 @@
+<h1>Project Home</h1>
+
+
+<div class="carousel" style="height: 500px;" data-role="carousel"  data-param-direction="left" data-param-period="9999999999999" data-param-markers="on" >
+                                <div class="slides">
+                                    <div class="slide image" >
+<!--  ============================Users slide=========================== -->
+
+
+		
+<% if @users.count == 0  %>
+<p> No users yet...</p>
+<% else %>
+ <ul class="listview fluid">
+ <li>
+                          
+
+                            <div class="icon">
+                                <i class="icon-user"></i>
+                            </div>
+
+                            <div class="data">
+                                <h2>All Users</h2>
+                                
+                            </div>
+                        </li>
+						
+						
+<% @users.each do |user| %>
+                                          <li class="bg-color-pinkDark fg-color-white  clickableDiv">
+                                            <div class="icon">
+                                             <i class="icon-user icon-small"></i>
+                                            </div>
+                                            <div class="data">
+  
+   <%= link_to content_tag(:span, ""), user, html_options = { style: "color: #ffffff;"} %> 
+   <%= user.name %> </br>
+   <%= user.email %>
+  
+                                            </div>
+                                          </li>
+<%end%>
+ </ul>
+<%end%>
+                     </div>
+					 
+<!--  ============================Weeks slide=========================== -->
+                                    <div class="slide image" >
+<% if @users.count == 0  %>
+<p> No users yet...</p>
+<% else %>
+ <ul class="listview fluid">
+ <li>
+                          
+
+                            <div class="icon">
+                                <i class="icon-drawer"></i>
+                            </div>
+
+                            <div class="data">
+                                <h2>All Weeks</h2>
+                                
+                            </div>
+                        </li>
+<% @weeks.each do |week| %>
+                                          <li class="bg-color-pinkDark fg-color-white clickableDiv">
+                                            <div class="icon">
+                                             <i class="icon-drawer icon-small"></i>
+                                            </div>
+                                            <div class="data">
+  
+   <%= link_to content_tag(:span, ""), week, html_options = { style: "color: #ffffff;"} %>
+   <%= week.name %> </br>
+  <%= week.status  %></br>
+                                            </div>
+                                          </li>
+<%end%>
+ </ul>
+<%end%>
+
+                                    </div>
+
+
+                                </div>
+                                <span class="control left">&#8249;</span>
+                                <span class="control right">&#8250;</span>
+                            </div>
+                        </div>
+						
+

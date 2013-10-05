@@ -1,0 +1,36 @@
+.metrouicss .app-bar {
+  min-height: 20px !important;
+}
+
+.metrouicss .control {
+  color: rgb(58,30,30) !important;
+}
+
+.metrouicss .listview {
+  margin-top: 3px;
+  margin-left: 12px !important;
+}
+
+.metrouicss .tile {
+  margin-top: 2px !important;
+  margin-left: 12px !important;
+   a {
+      color: #ffffff;
+     }
+}
+
+
+
+.metrouicss .icon-small {
+  font-size: 27px;
+}
+
+
+.clickableDiv span {
+width:100%;
+height:100%;
+position:absolute;
+z-index:2;
+top:0px;
+left:0px;
+ }

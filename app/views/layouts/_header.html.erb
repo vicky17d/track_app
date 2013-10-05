@@ -1,0 +1,53 @@
+<div class="nav-bar bg-color-darken">
+
+                        <div class="nav-bar-inner">
+                            <%= link_to "Tract It!", root_path, class: "element brand" %>
+
+                            <span class="divider"></span>
+                            <ul class="menu">
+                                <li data-role="dropdown">
+                                    <a>Teams</a>
+                                    <ul class="dropdown-menu">
+
+                                        <li><a href="#">PL QA</a></li>
+
+                                        <li><a href="#">SubItem 2</a></li>
+
+                                        <li><a href="#">SubItem 3</a></li>
+
+                                        <li class="divider"></li>
+
+                                        <li><a href="#">SubItem 4</a></li>
+
+                                    </ul>
+
+                                </li>
+
+
+                                <li><a href="#">Update</a></li>
+
+                                <li><a href="#">My updates</a></li>
+                                <li><%= link_to "About", about_path %></li>
+                                <li><%= link_to "Help", help_path %></li>
+
+                                <li><%= link_to "Home", root_path %></li>
+                     <% if !signed_in? %>
+                                <li><%= link_to "Sign in", signin_path %></li>
+                     <%end%>
+                     <% if signed_in? %>
+
+                                <li><%= link_to "Users", users_path %></li>
+                                <li><%= link_to "Weeks", weeks_path %></li>
+                                <li>
+                                   <%= link_to signout_path, method: "delete" do %>
+                                   <i class="icon-off"></i> Sign out
+                                   <%end%>
+                                </li>
+
+                                <%end%>
+                            </ul>
+
+                        </div>
+
+                    </div>
+

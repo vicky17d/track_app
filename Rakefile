@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-TrackApp::Application.load_tasks
+MetroApp::Application.load_tasks
